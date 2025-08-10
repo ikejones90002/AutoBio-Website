@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>If My Life Were A Song - A Memoir by Isaac E. Jones III</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+        margin: 0;
+        background-color: #fdfdfd;
+        color: #333;
+        line-height: 1.6;
+        transition: background-color 0.4s ease, color 0.4s ease;
+    }
+    body.dark-theme {
+        background-color: #121212;
+        color: #e5e5e5;
+    }
+
+    header {
+        text-align: center;
+        padding: 2em;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: #fff;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    header img {
+        max-width: 200px;
+        margin-top: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    nav {
+        text-align: center;
+        background: #fff;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    body.dark-theme nav {
+        background: #1f1f1f;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+    nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #2575fc;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    nav a:hover {
+        color: #6a11cb;
+    }
+    body.dark-theme nav a {
+        color: #a3bffa;
+    }
+
+    section {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        transition: background 0.3s;
+    }
+    body.dark-theme section {
+        background: #1e1e1e;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    .collapsible {
+        cursor: pointer;
+        padding: 12px;
+        background-color: #f1f1f1;
+        border: none;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+    }
+    .collapsible:hover {
+        background-color: #e1e1e1;
+    }
+    body.dark-theme .collapsible {
+        background-color: #333;
+    }
+    body.dark-theme .collapsible:hover {
+        background-color: #444;
+    }
+    .collapsible + div {
+        display: none;
+        margin-top: 10px;
+    }
+    .collapsible.active + div {
+        display: block;
+        animation: fadeIn 0.4s ease;
+    }
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    .social-links a {
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #2575fc;
+    }
+    .social-links a:hover {
+        text-decoration: underline;
+    }
+    body.dark-theme .social-links a {
+        color: #a3bffa;
+    }
+
+    .theme-switch {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 2000;
+    }
+    .theme-switch input {
+        display: none;
+    }
+    .theme-switch label {
+        display: block;
+        width: 50px;
+        height: 25px;
+        background: #ccc;
+        border-radius: 25px;
+        position: relative;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    body.dark-theme .theme-switch label {
+        background: #555;
+    }
+    .theme-switch label::before {
+        content: '';
+        position: absolute;
+        width: 23px;
+        height: 23px;
+        background: white;
+        border-radius: 50%;
+        top: 1px;
+        left: 1px;
+        transition: transform 0.3s;
+    }
+    .theme-switch input:checked + label::before {
+        transform: translateX(25px);
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9em;
+        background: #f1f1f1;
+    }
+    body.dark-theme footer {
+        background: #1f1f1f;
+    }
+    .video-section {
+  display: flex;
+  justify-content: center; /* centers them horizontally */
+  gap: 20px; /* space between videos */
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+.video-section video {
+  max-width: 100%;
+  height: auto;
+  flex: 1 1 45%; /* makes them each take ~45% width */
+}
+</style>
+</head>
+<body>
+
+<div class="theme-switch">
+    <input type="checkbox" id="theme-toggle">
+    <label for="theme-toggle"></label>
+</div>
+
+<header>
+    <h1>If My Life Were A Song</h1>
+    <p>A Memoir by Isaac E. Jones III</p>
+    <img src="book-cover.png" alt="Book Cover: If My Life Were A Song">
+</header>
+
+<nav>
+    <a href="#book">About the Book</a>
+    <a href="#author">About the Author</a>
+    <a href="#multimedia">Multimedia</a>
+    <a href="#purchase">Purchase</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="book">
+    <h2 class="collapsible">About the Book</h2>
+    <div>
+        <p><em>If My Life Were A Song: A Memoir</em> (Paperback – March 11, 2025) by Isaac E Jones III</p>
+        <p>From the Appalachian foothills of Chattanooga, Tennessee, to the turbulent streets of Watts, Los Angeles, <em>If My Life Were A Song</em> takes you on a gripping journey of survival, resilience, and redemption. This memoir delves into the life of a young boy growing up amidst the contradictions of Mimosa Park, a neighborhood where innocence collided with the shadows of crime.</p>
+        <p>Follow his story as he navigates the devastating loss of his mother, the incarceration of his brother, and the challenges of growing up in the infamous Jordan Downs Housing Projects. Through gang wars, family struggles, and brushes with the law, he discovers strength in unexpected places: the church that bought him his first suit, the mentors who believed in him, and a deepening relationship with God.</p>
+        <p>This is a raw and unfiltered account of a life shaped by adversity but ultimately transformed by faith, family, and the enduring power of hope. Blending the gritty realism of gangster rap with the introspection of conscious rap, this story challenges stereotypes and offers a powerful message of redemption.</p>
+    </div>
+</section>
+
+<section id="author">
+    <h2 class="collapsible">About the Author</h2>
+    <div>
+        <p>Isaac E. Jones III is a writer whose life journey—from a childhood in Chattanooga to the streets of Los Angeles—forms the backbone of his memoir. His resilience and faith have shaped an inspiring message that he now shares with the world.</p>
+        <p>Isaac E. Jones III is a dedicated educator and mentor currently residing in Memphis, Tennessee. With a passion for empowering others, Isaac works as an Instructor Assistant for a nonprofit organization, teaching Front-End Web Development and inspiring students to pursue their dreams in technology. Drawing from a life filled with trials and triumphs, Isaac shares a deeply personal story of resilience, faith, and transformation. This memoir is a testament to his journey from adversity to purpose, offering hope and inspiration to readers from all walks of life.</p>
+    </div>
+</section>
+
+<section id="multimedia">
+    <h2>Multimedia</h2>
+    <p>Explore photos, videos, and interviews related to the memoir and Isaac E. Jones’ journey.</p>
+
+    <!-- Commercial Videos -->
+  <div style="display: flex; flex-direction: row; gap: 20px; align-items: center; margin-top: 20px;">
+        <video controls poster="IMG_1821.jpg" style="max-width: 25%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+            <source src="commercial1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <video controls poster="IMG_1822.jpg" style="max-width: 25%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+            <source src="commercial2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+
+<section id="purchase">
+    <h2>Purchase</h2>
+    <p>Get your copy from your favorite bookseller:</p>
+    <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:center;margin-top:20px;">
+        <a href="https://www.friesenpress.com/" target="_blank">
+            <img src="friesenpress-asset.jpeg" alt="FriesenPress" style="max-height:60px;">
+        </a>
+        <a href="https://www.amazon.com/" target="_blank">
+            <img src="Amazon-Emblem.jpg" alt="Amazon" style="max-height:60px;">
+        </a>
+        <a href="https://www.barnesandnoble.com/" target="_blank">
+            <img src="Barnes-Noble-logo.png" alt="Barnes & Noble" style="max-height:60px;">
+        </a>
+        <a href="https://www.booksamillion.com/" target="_blank">
+            <img src="Books-A-Million-logo.jpeg" alt="Books-A-Million" style="max-height:60px;">
+        </a>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Connect with Isaac E. Jones III:</p>
+    <div class="social-links">
+        <a href="https://x.com/ijones392262">Twitter</a>
+        <a href="https://facebook.com/ijones392262">Facebook</a>
+        <a href="https://instagram.com/ijones392262">Instagram</a>
+        <a href="https://tiktok.com/@ijones392262">TikTok</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 103 Software Solution LLC</p>
+</footer>
+
+<script>
+    document.querySelectorAll('.collapsible').forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+    document.getElementById('theme-toggle').addEventListener('change', function() {
+        document.body.classList.toggle('dark-theme', this.checked);
+    });
+</script>
+
+</body>
+</html>
