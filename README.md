@@ -4,7 +4,7 @@ Welcome to the official website for *If My Life Were A Song*, a powerful and per
 
 ## 🌐 Live Preview
 
-Visit the site: [If My Life Were A Song](https://https://ikejones90002.github.io/AutoBio-Website/)
+Visit the site: [If My Life Were A Song](https://ikejones90002.github.io/AutoBio-Website/)
 
 ## 📚 About the Project
 
